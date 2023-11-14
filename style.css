@@ -1,0 +1,179 @@
+:root {
+  --black: rgb(54, 65, 69);
+  --black-04: rgba(54, 65, 69, 0.04);
+  --black-30: rgba(54, 65, 69, 0.3);
+  --accent: #00a5ec;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 2rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+body.flip {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+body.no-reference {
+  grid-template-columns: 2fr 1fr;
+}
+
+body.no-reference .preview::before {
+  content: attr(data-content);
+}
+
+.learn,
+.preview {
+  padding: 2rem;
+  position: relative;
+  border-radius: 4px;
+  margin-top: 3rem;
+}
+
+.learn::before,
+.preview::before {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 4px;
+  position: absolute;
+  top: -3rem;
+  left: 0;
+}
+
+.learn {
+  border: 1px dashed var(--black-30);
+}
+
+.learn::before {
+  content: "Practice area";
+  background-color: var(--accent);
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: var(--black-04);
+}
+
+.preview::before {
+  content: "Example for " attr(data-content);
+  background-color: var(--black);
+  max-width: calc(100% - 2rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.preview img {
+  max-width: 95%;
+}
+
+.preview p {
+  max-width: 75%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  /* color: var(--black); */
+}
+
+.preview a {
+  color: var(--accent);
+}
+
+
+/* ||| Card ||| */
+
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+p{
+  font-size: 12px;
+  margin: 5px;
+}
+
+
+.cards {
+  display: block;
+  padding: 20px;
+  width: 300px;
+  background-color: #fff;
+  height: 530px;
+  -webkit-box-shadow: 3px 4px 30px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 3px 4px 30px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 3px 4px 30px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 6px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(24, 17, 78);
+}
+
+h2 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #262424;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+
+.card-1 {
+  display: flex;
+  background-color: #cb7bcc;
+  border-radius: 8px;
+  height: 160px;
+  margin-bottom: 20px;
+}
+.card-2 {
+  display: flex;
+  background-color: rgb(234, 120, 20);
+  border-radius: 8px;
+  height: 160px;
+  margin-bottom: 20px;
+}
+.card-3 {
+  display: flex;
+  background-color: rgb(28, 95, 182);
+  border-radius: 8px;
+  height: 160px;
+}
+
+.texts {
+  display: flex;
+}
+
+.textss , .text , .container{
+  background-color: #cb7bcc;
+}
+.texts-2 , .text-2 , .container2{
+  background-color: rgb(234, 120, 20);
+}
+.texts-3 , .text-3 , .container3{
+  background-color: rgb(28, 95, 182);
+}
+
+.container2 {
+  margin-left: -90px;
+}
